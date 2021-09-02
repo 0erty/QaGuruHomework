@@ -12,3 +12,13 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
+*.html
+*.png
+*.xml
+*.css
+*.bin
+QAGuruHomeworks/build/reports/tests/test/js/report.js
+QAGuruHomeworks/build/test-results/test/binary/output.bin.idx
+QAGuruHomeworks/gradle/wrapper/gradle-wrapper.jar
+QAGuruHomeworks/gradlew
+QAGuruHomeworks/gradlew.bat
