@@ -22,3 +22,6 @@ QAGuruHomeworks/build/test-results/test/binary/output.bin.idx
 QAGuruHomeworks/gradle/wrapper/gradle-wrapper.jar
 QAGuruHomeworks/gradlew
 QAGuruHomeworks/gradlew.bat
+QAGuruHomeworks/.idea
+QAGuruHomeworks/build
+QAGuruHomeworks/gradle
