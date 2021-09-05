@@ -8,6 +8,7 @@ import java.io.File;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -34,8 +35,8 @@ public class FirstTest {
         $("#react-select-2-option-0").click();
         $("#subjectsInput").setValue("Physics");
         $("#react-select-2-option-0").click();
-        $("#hobbiesWrapper > div.col-md-9.col-sm-12 > div:nth-child(1) > label").click();
-        $("#hobbiesWrapper > div.col-md-9.col-sm-12 > div:nth-child(2) > label").click();
+        $("#hobbiesWrapper").$(byText("Sports")).click();
+        $("#hobbiesWrapper").$(byText("Reading")).click();
         $("#uploadPicture").uploadFile(new File("src/test/java/resources/elon_musk.jpg"));
         $("#currentAddress").setValue("Boca Chica Village, Texas");
         $("#close-fixedban").click();
@@ -47,25 +48,25 @@ public class FirstTest {
         $("#submit").click();
 
         $("#example-modal-sizes-title-lg").shouldBe(visible).shouldHave(text("Thanks for submitting the form"));
-        $(".table > tbody > tr:nth-child(1) > td:nth-child(1)").shouldBe(exist).shouldHave(text("Student Name"));
-        $(".table > tbody > tr:nth-child(1) > td:nth-child(2)").shouldBe(exist).shouldHave(text("Elon Musk"));
-        $(".table > tbody > tr:nth-child(2) > td:nth-child(1)").shouldBe(exist).shouldHave(text("Student Email"));
-        $(".table > tbody > tr:nth-child(2) > td:nth-child(2)").shouldBe(exist).shouldHave(text("musk@tesla.com"));
-        $(".table > tbody > tr:nth-child(3) > td:nth-child(1)").shouldBe(exist).shouldHave(text("Gender"));
-        $(".table > tbody > tr:nth-child(3) > td:nth-child(2)").shouldBe(exist).shouldHave(text("Male"));
-        $(".table > tbody > tr:nth-child(4) > td:nth-child(1)").shouldBe(exist).shouldHave(text("Mobile"));
-        $(".table > tbody > tr:nth-child(4) > td:nth-child(2)").shouldBe(exist).shouldHave(text("7900000000"));
-        $(".table > tbody > tr:nth-child(5) > td:nth-child(1)").shouldBe(exist).shouldHave(text("Date of Birth"));
-        $(".table > tbody > tr:nth-child(5) > td:nth-child(2)").shouldBe(exist).shouldHave(text("28 June,1971"));
-        $(".table > tbody > tr:nth-child(6) > td:nth-child(1)").shouldBe(exist).shouldHave(text("Subjects"));
-        $(".table > tbody > tr:nth-child(6) > td:nth-child(2)").shouldBe(exist).shouldHave(text("Science, Physics"));
-        $(".table > tbody > tr:nth-child(7) > td:nth-child(1)").shouldBe(exist).shouldHave(text("Hobbies"));
-        $(".table > tbody > tr:nth-child(7) > td:nth-child(2)").shouldBe(exist).shouldHave(text("Sports, Reading"));
-        $(".table > tbody > tr:nth-child(8) > td:nth-child(1)").shouldBe(exist).shouldHave(text("Picture"));
-        $(".table > tbody > tr:nth-child(8) > td:nth-child(2)").shouldBe(exist).shouldHave(text("elon_musk.jpg"));
-        $(".table > tbody > tr:nth-child(9) > td:nth-child(1)").shouldBe(exist).shouldHave(text("Address"));
-        $(".table > tbody > tr:nth-child(9) > td:nth-child(2)").shouldBe(exist).shouldHave(text("Boca Chica Village, Texas"));
-        $(".table > tbody > tr:nth-child(10) > td:nth-child(1)").shouldBe(exist).shouldHave(text("State and City"));
-        $(".table > tbody > tr:nth-child(10) > td:nth-child(2)").shouldBe(exist).shouldHave(text("Rajasthan Jaiselmer"));
+        $(".table").$(byText("Student Name")).shouldBe(exist);
+        $(".table").$(byText("Elon Musk")).shouldBe(exist);
+        $(".table").$(byText("Student Email")).shouldBe(exist);
+        $(".table").$(byText("musk@tesla.com")).shouldBe(exist);
+        $(".table").$(byText("Gender")).shouldBe(exist);
+        $(".table").$(byText("Male")).shouldBe(exist);
+        $(".table").$(byText("Mobile")).shouldBe(exist);
+        $(".table").$(byText("7900000000")).shouldBe(exist);
+        $(".table").$(byText("Date of Birth")).shouldBe(exist);
+        $(".table").$(byText("28 June,1971")).shouldBe(exist);
+        $(".table").$(byText("Subjects")).shouldBe(exist);
+        $(".table").$(byText("Computer Science, Physics")).shouldBe(exist);
+        $(".table").$(byText("Hobbies")).shouldBe(exist);
+        $(".table").$(byText("Sports, Reading")).shouldBe(exist);
+        $(".table").$(byText("Picture")).shouldBe(exist);
+        $(".table").$(byText("elon_musk.jpg")).shouldBe(exist);
+        $(".table").$(byText("Address")).shouldBe(exist);
+        $(".table").$(byText("Boca Chica Village, Texas")).shouldBe(exist);
+        $(".table").$(byText("State and City")).shouldBe(exist);
+        $(".table").$(byText("Rajasthan Jaiselmer")).shouldBe(exist);
     }
 }
